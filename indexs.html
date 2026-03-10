@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>SimpleLearn</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
+margin:0;
+}
+
+header{
+background:#1e88e5;
+color:white;
+padding:20px;
+}
+
+button{
+padding:10px 15px;
+margin:5px;
+border:none;
+background:#1e88e5;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1565c0;
+}
+
+.section{
+display:none;
+background:white;
+margin:20px;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SimpleLearn</h1>
+<p>Making Learning Simple for Students</p>
+
+</header>
+
+<h2>Select Department</h2>
+
+<button onclick="show('science')">Science</button>
+<button onclick="show('arts')">Arts</button>
+<button onclick="show('commercial')">Commercial</button>
+
+
+<!-- SCIENCE -->
+
+<div id="science" class="section">
+
+<h2>Science Subjects</h2>
+
+<button onclick="show('math')">Mathematics</button>
+<button onclick="show('physics')">Physics</button>
+<button onclick="show('biology')">Biology</button>
+<button onclick="show('chemistry')">Chemistry</button>
+
+</div>
+
+
+<!-- ARTS -->
+
+<div id="arts" class="section">
+
+<h2>Arts Subjects</h2>
+
+<button onclick="show('english')">English</button>
+<button onclick="show('literature')">Literature</button>
+<button onclick="show('government')">Government</button>
+<button onclick="show('history')">History</button>
+
+</div>
+
+
+<!-- COMMERCIAL -->
+
+<div id="commercial" class="section">
+
+<h2>Commercial Subjects</h2>
+
+<button onclick="show('accounting')">Accounting</button>
+<button onclick="show('commerce')">Commerce</button>
+<button onclick="show('economics')">Economics</button>
+<button onclick="show('marketing')">Marketing</button>
+
+</div>
+
+
+<!-- MATHEMATICS -->
+
+<div id="math" class="section">
+
+<h2>Mathematics – Algebra</h2>
+
+<p>
+Algebra is a branch of mathematics that uses letters and symbols
+to represent numbers.
+</p>
+
+<p>Example:</p>
+
+<p>2 + x = 7</p>
+
+<p>x = 5</p>
+
+<h3>Quiz</h3>
+
+<p>Find x in 3 + x = 9</p>
+
+<button onclick="answer('math','6')">6</button>
+<button onclick="answer('math','3')">3</button>
+<button onclick="answer('math','9')">9</button>
+
+<p id="mathResult"></p>
+
+</div>
+
+
+<!-- PHYSICS -->
+
+<div id="physics" class="section">
+
+<h2>Physics – Force</h2>
+
+<p>
+Force is a push or pull acting on an object.
+</p>
+
+<p>
+Force can change the motion of an object.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Which of the following is a force?</p>
+
+<button onclick="answer('physics','push')">Push</button>
+<button onclick="answer('physics','light')">Light</button>
+<button onclick="answer('physics','sound')">Sound</button>
+
+<p id="physicsResult"></p>
+
+</div>
+
+
+<!-- BIOLOGY -->
+
+<div id="biology" class="section">
+
+<h2>Biology – Living Things</h2>
+
+<p>
+Living things grow, reproduce and respond to their environment.
+</p>
+
+<p>Examples include humans, animals and plants.</p>
+
+<h3>Quiz</h3>
+
+<p>Which is a living thing?</p>
+
+<button onclick="answer('biology','goat')">Goat</button>
+<button onclick="answer('biology','stone')">Stone</button>
+<button onclick="answer('biology','plastic')">Plastic</button>
+
+<p id="biologyResult"></p>
+
+</div>
+
+
+<!-- CHEMISTRY -->
+
+<div id="chemistry" class="section">
+
+<h2>Chemistry – Matter</h2>
+
+<p>
+Matter is anything that has mass and occupies space.
+</p>
+
+<p>
+Examples include water, air and wood.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Which of these is matter?</p>
+
+<button onclick="answer('chemistry','air')">Air</button>
+<button onclick="answer('chemistry','sound')">Sound</button>
+<button onclick="answer('chemistry','light')">Light</button>
+
+<p id="chemistryResult"></p>
+
+</div>
+
+
+<!-- ENGLISH -->
+
+<div id="english" class="section">
+
+<h2>English Language – Noun</h2>
+
+<p>
+A noun is the name of a person, place, animal or thing.
+</p>
+
+<p>Examples: Boy, Lagos, Dog, Book</p>
+
+<h3>Quiz</h3>
+
+<p>Which of these is a noun?</p>
+
+<button onclick="answer('english','dog')">Dog</button>
+<button onclick="answer('english','run')">Run</button>
+<button onclick="answer('english','quickly')">Quickly</button>
+
+<p id="englishResult"></p>
+
+</div>
+
+
+<!-- LITERATURE -->
+
+<div id="literature" class="section">
+
+<h2>Literature – Poetry</h2>
+
+<p>
+Poetry expresses ideas using rhythm and emotions.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Poetry mainly uses?</p>
+
+<button onclick="answer('literature','rhythm')">Rhythm</button>
+<button onclick="answer('literature','numbers')">Numbers</button>
+<button onclick="answer('literature','formulas')">Formulas</button>
+
+<p id="literatureResult"></p>
+
+</div>
+
+
+<!-- GOVERNMENT -->
+
+<div id="government" class="section">
+
+<h2>Government – Democracy</h2>
+
+<p>
+Democracy is a system of government where citizens
+choose their leaders through elections.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Leaders are chosen through?</p>
+
+<button onclick="answer('government','election')">Election</button>
+<button onclick="answer('government','war')">War</button>
+<button onclick="answer('government','inheritance')">Inheritance</button>
+
+<p id="governmentResult"></p>
+
+</div>
+
+
+<!-- HISTORY -->
+
+<div id="history" class="section">
+
+<h2>History – Nigerian Independence</h2>
+
+<p>
+Nigeria gained independence from Britain in 1960.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Nigeria gained independence in?</p>
+
+<button onclick="answer('history','1960')">1960</button>
+<button onclick="answer('history','1970')">1970</button>
+<button onclick="answer('history','1950')">1950</button>
+
+<p id="historyResult"></p>
+
+</div>
+
+
+<!-- ACCOUNTING -->
+
+<div id="accounting" class="section">
+
+<h2>Accounting – Assets</h2>
+
+<p>
+Assets are resources owned by a business.
+</p>
+
+<p>Examples include cash, equipment and buildings.</p>
+
+<h3>Quiz</h3>
+
+<p>Which of these is an asset?</p>
+
+<button onclick="answer('accounting','cash')">Cash</button>
+<button onclick="answer('accounting','debt')">Debt</button>
+<button onclick="answer('accounting','expense')">Expense</button>
+
+<p id="accountingResult"></p>
+
+</div>
+
+
+<!-- COMMERCE -->
+
+<div id="commerce" class="section">
+
+<h2>Commerce – Trade</h2>
+
+<p>
+Trade is the buying and selling of goods and services.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Trade involves?</p>
+
+<button onclick="answer('commerce','buying')">Buying and Selling</button>
+<button onclick="answer('commerce','farming')">Farming</button>
+<button onclick="answer('commerce','mining')">Mining</button>
+
+<p id="commerceResult"></p>
+
+</div>
+
+
+<!-- ECONOMICS -->
+
+<div id="economics" class="section">
+
+<h2>Economics – Demand</h2>
+
+<p>
+Demand is the willingness of consumers to buy goods
+at a given price.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Demand means?</p>
+
+<button onclick="answer('economics','buy')">Willingness to Buy</button>
+<button onclick="answer('economics','sell')">Willingness to Sell</button>
+<button onclick="answer('economics','produce')">Production</button>
+
+<p id="economicsResult"></p>
+
+</div>
+
+
+<!-- MARKETING -->
+
+<div id="marketing" class="section">
+
+<h2>Marketing – Promotion</h2>
+
+<p>
+Promotion is the process of informing customers about products.
+</p>
+
+<h3>Quiz</h3>
+
+<p>Advertising belongs to?</p>
+
+<button onclick="answer('marketing','promotion')">Promotion</button>
+<button onclick="answer('marketing','production')">Production</button>
+<button onclick="answer('marketing','transport')">Transport</button>
+
+<p id="marketingResult"></p>
+
+</div>
+
+
+<script>
+
+const correctAnswers = {
+math:"6",
+physics:"push",
+biology:"goat",
+chemistry:"air",
+english:"dog",
+literature:"rhythm",
+government:"election",
+history:"1960",
+accounting:"cash",
+commerce:"buying",
+economics:"buy",
+marketing:"promotion"
+};
+
+function show(id){
+
+document.querySelectorAll('.section').forEach(function(sec){
+sec.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+function answer(subject,ans){
+
+if(ans === correctAnswers[subject]){
+
+document.getElementById(subject+"Result").innerHTML="✅ Correct!";
+
+}else{
+
+document.getElementById(subject+"Result").innerHTML="❌ Try again.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
